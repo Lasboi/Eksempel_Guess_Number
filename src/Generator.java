@@ -24,10 +24,18 @@ public class Generator {
         while (number != guess) {
             System.out.print("Hvilket tal tror du jeg tænker på?: ");
             guess = scanner.nextInt();
-            if (number == guess)
+            if (number == guess) {
                 System.out.println("Det er korrekt! Tallet var " + number);
-            else
+                System.out.println("******************************");
+            }
+            else if (number < 0 || number > 10) {
+                System.out.println("Din dumpap... Jeg skrev tallet var mellem 1-10...");
+            }
+            else {
+                for (int i = 0; i < 20; ++i) System.out.println();
                 System.out.println("Det er desværre forkert. Tallet var ikke " + guess);
+                System.out.println("******************************");
+            }
         }
     }
 

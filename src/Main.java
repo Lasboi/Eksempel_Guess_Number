@@ -7,9 +7,9 @@ public class Main {
          */
         Generator.setup();
         Generator.guessLoop();
-        Generator.madeBy();
         UserNumber.pickNumber();
         UserNumber.guessNumber();
+        Generator.madeBy();
 
 
     }

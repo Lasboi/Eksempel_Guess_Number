@@ -24,7 +24,7 @@ public class UserNumber {
     gang der bliver gættet på et tal
      */
     public static void guessNumber() {
-        while (number != guess) {
+        while (number != guess && number < 11 && number > 0) {
             System.out.println("Jeg gætter på at dit tal er: " + guess);
             if (number != guess)
                 System.out.println("Satans! Dit tal var ikke " + guess);
@@ -38,6 +38,10 @@ public class UserNumber {
 
             if (number == guess)
                 System.out.println("Hah! Jeg gættede dit tal det var " + number + " Noob!");
+            else {
+                System.out.println("Hov hov det er ikke tilladt at bruge det tal!");
+                pickNumber();
+            }
 
     }
 }
